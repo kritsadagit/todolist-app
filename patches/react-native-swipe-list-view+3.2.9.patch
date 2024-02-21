@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-native-swipe-list-view/components/SwipeRow.js b/node_modules/react-native-swipe-list-view/components/SwipeRow.js
+index 9e3767f..16f444c 100644
+--- a/node_modules/react-native-swipe-list-view/components/SwipeRow.js
++++ b/node_modules/react-native-swipe-list-view/components/SwipeRow.js
+@@ -56,6 +56,8 @@ class SwipeRow extends Component {
+         };
+         this._translateX = new Animated.Value(0);
+ 
++        this._translateX.addListener(() => {return});
++
+         this._panResponder = PanResponder.create({
+             onMoveShouldSetPanResponder: (e, gs) =>
+                 this.handleOnMoveShouldSetPanResponder(e, gs),
